@@ -6,7 +6,7 @@ public class BMI_Calculator {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // Taking input for the number of persons
+        
         System.out.print("Enter the number of persons: ");
         int numPersons = sc.nextInt();
 
@@ -16,7 +16,7 @@ public class BMI_Calculator {
         double[] bmiValues = new double[numPersons];
         String[] weightStatus = new String[numPersons];
 
-        // Taking input for height and weight
+       
         for (int i = 0; i < numPersons; i++) {
             System.out.println("Enter details for Person " + (i + 1) + ":");
             System.out.print("Height (in meters): ");
@@ -24,10 +24,10 @@ public class BMI_Calculator {
             System.out.print("Weight (in kg): ");
             weights[i] = sc.nextDouble();
 
-            // Calculating BMI
+           
             bmiValues[i] = weights[i] / (heights[i] * heights[i]);
 
-            // Determining weight status based on BMI
+          
             if (bmiValues[i] <= 18.4) {
                 weightStatus[i] = "Underweight";
             } else if (bmiValues[i] >= 18.5 && bmiValues[i] <= 24.9) {
@@ -39,7 +39,7 @@ public class BMI_Calculator {
             }
         }
 
-        // Displaying results
+        
         System.out.println("\nHeight, Weight, BMI, and Weight Status of Individuals:");
         for (int i = 0; i < numPersons; i++) {
             System.out.println("Person " + (i + 1) + ": Height = " + heights[i] + "m, Weight = " + weights[i] + "kg, BMI = " + bmiValues[i] + ", Status = " + weightStatus[i]);
